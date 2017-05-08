@@ -1,0 +1,19 @@
+<h1>Appearance Form</h1>
+
+<% @appearance.errors.full_messages.each do |message| %>
+  <p><%= message %></p>
+<% end %>
+
+<%= form_for @appearance do |f| %>
+
+  <p><%= f.label :episode_id %></p>
+  <p><%= f.text_field :episode_id %></p>
+  <p><%= f.label :guest_id %></p>
+  <p><%= f.text_field :guest_id %></p>
+  <p><%= f.label "Please rate this appearance from 1-5" %></p>
+  <p><%= f.number_field :rating %></p>
+  <p><%= f.submit %></p>
+
+<% end %>
+
+<%= link_to "Return to Appearances", appearances_path %>

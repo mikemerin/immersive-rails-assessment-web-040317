@@ -1,0 +1,9 @@
+<h1>All Appearances</h1>
+
+<ul>
+  <% @appearances.each do |appearance| %>
+    <li><%= link_to "Episode #{appearance.episode.id} with #{appearance.guest.name} (rating of #{appearance.rating})", appearance %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Create a New Appearance", new_appearance_path %>
